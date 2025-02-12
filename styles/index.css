@@ -1,7 +1,7 @@
 :root {
     --background-color: #F0F7EE;
     --text-color: #000000;
-    --accent-color: #87BBA2;
+    --accent-color: #87bba2;
     --dim-color: #5D737E;
     --bold-color: #FFF07C;
 
@@ -20,20 +20,21 @@ body {
     color: var(--text-color);
     font-family: 'Courier New', monospace;
 }
-a {
+
+/*----------------- Header ------------------*/
+.logo, .events, .about, .contact {
     color: white;
     background-color: var(--accent-color);
     text-decoration: none;
-    padding: 8px;
+    padding: .5rem;
     border-radius: 9999px;
-    transition: transform var(--transition-timing)
-
-}
-a:hover {
-    transform: scale(1.3);
+    transition: all var(--transition-timing)
 }
 
-@media screen and (min-width:601px) {}
+.logo:hover, .events:hover, .about:hover, .contact:hover {
+    scale: 1.2;
+}
+
 nav {
     position: sticky;
     top: 0px;
@@ -55,13 +56,8 @@ nav {
     padding: 1rem;
 }
 
-
-.logo {
+.link:first-child {
     flex: 1;
-}
-.logo:hover {
-    transform: scale(1.1) translateX(3vw);
-    transition: transform var(--transition-timing) ease-in-out;
 }
 
 .welcome-banner {
@@ -138,7 +134,7 @@ img:nth-of-type(5){
 /*------------- Main content ----------------*/
 .main-content {
     background-color: var(--background-color);
-    padding: 4rem;
+    padding: 4rem 2rem;
     text-align: center;
 }
 .events-container {
@@ -146,18 +142,17 @@ img:nth-of-type(5){
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    width: 95%;
-    height: 700px;
-    padding: 24px;
+    height: 60vh;
+    padding: 1.5rem;
 
-    display: flex; /* Enables flexbox */
-    flex-direction: row; /* Aligns children horizontally */
+    display: flex;
+    flex-direction: row;
     align-items: end;
-    gap: 16px; /* Space between event cards */
+    gap: 1rem;
 
     overflow-x: auto; /* Enables horizontal scrolling */
-    overflow-y: hidden; /* Prevents vertical scrolling */
-    white-space: nowrap; /* Prevents wrapping */
+    overflow-y: hidden;
+    flex-wrap: nowrap; /* Prevents wrapping*/
 
     border-radius: 5%;
     scrollbar-width:thin;
@@ -165,28 +160,44 @@ img:nth-of-type(5){
 }
 
 .event {
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 320px;
+    background-color: rgba(0, 0, 0, 0.6);
+    min-width: 320px; /* Prevents shrickage */
+    max-width: 320px; /* Prevents expansion */
     height: 500px;
     margin: 16px;
     border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+    transition: all var(--transition-timing);
+}
+
+.event:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    scale: 1.05;
+}
+
+.event-info-container {
+    color: var(--background-color)
+}
+
+.event-card-container {
+    flex: 1; /* Ensures it takes up half the event card */
+    width: 100%;
+    height: 50%; /* Controls the image height */
+    overflow: hidden; /* Prevents image overflow */
+
 }
 
 .card-cover {
-    margin: 0;
-    padding: 0;
-    
     width: 100%;
     height: 100%;
-    
-    left:0;
-    top:0;
-
-    object-fit:contain;
-    position: relative;
+    object-fit:cover;
     z-index: 0;
 }
-
 /*---------------- about -----------------*/
 .about-content {
     background-color: var(--accent-color);
@@ -214,12 +225,108 @@ img:nth-of-type(5){
 
     position: relative;
     object-fit: cover;
-    border-radius: 3px;
+    border-radius: 5px;
+}
+
+.message {
+    margin: 2rem 1rem;
+    font-style: italic;
+    font-size: large;
+}
+.quote {
+    font-style: italic;
+    font-weight: bold;
+    font-size: x-large;
 }
 /*---------------- footer ---------------*/
 .footer-content {
     background-color: var(--dim-color);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
+
+.footer-section {
+    flex: 1;
+    padding: 2rem;
+}
+
+.footer-title {
+    text-decoration: underline;
+    font-size:larger;
+    margin: 1rem;
+    text-align: center;
+}
+
+.bottom-links {
+    list-style-type: none;
+}
+.bottom-link {
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.bottom-events, .bottom-about, .bottom-contact {
+    color: var(--background-color);
+    text-decoration-line: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+}
+.labels {
+    margin-top: .5rem;
+}
+.inputs {
+    padding: .5rem;
+}
+
+@media screen and (max-width:709.9px) { /*----------- For Mobile screens------*/
+    .link:nth-child(2), .link:nth-child(3), .link:nth-child(4) {
+        display: none;
+    }
+    .hamburger-menu {
+        list-style-type: none;
+    }
+    .hamburger-link {
+        margin: 2rem 0;
+        visibility: hidden;
+    }
+    .welcome-text, .welcome-subtext {
+        font-size: 1.5rem;
+    }
+    .main-content {
+        padding: 2rem 0;
+    }
+    .events-container {
+        width: 100%;
+        border-radius: 0;
+        background-color: rgba(135, 187, 162, 0.8);
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .footer-content {
+        background-color: var(--dim-color);
+        color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
+
+@media screen and (min-width:710px) { /*----------- For Pc Screens -------------*/
+    .sidebar, .link:last-child {
+        display: none;
+    }
+    .events-container {
+        width: 95%;
+    }
+}
+
 @keyframes fade {
     0% {
         opacity: 1;

@@ -9,12 +9,22 @@
 </head>
 <body>
     <nav>
-        <ul class="links">
-            <li class="link logo"><a href="#head">Logo</a></li>
-            <li class="link events"><a href="#main">Events</a></li>
-            <li class="link about"><a href="#main">About</a></li>
-            <li class="link contact"><a href="#foot">Contact</a></li>
+        <ul id="main-links" class="links">
+            <li class="link"><a class="logo" href="#head">Eventicenter</a></li>
+            <li class="link"><a class="events" href="#main">Events</a></li>
+            <li class="link"><a class="about" href="#about">About</a></li>
+            <li class="link"><a class="contact" href="#foot">Contact</a></li>
+            <li class="link">
+                <label class="hamburger-menu">
+                    <input type="checkbox" />
+                </label>
+            </li>
         </ul>
+        <aside class="sidebar">
+            <a class="hamburger-link events" href="#main">Events</a>
+            <a class="hamburger-link about" href="#about">About</a>
+            <a class="hamburger-link contact" href="#foot">Contact</a>
+        </aside>
     </nav>
     <header id="head"class="welcome-banner">
         <section class="carousel">
@@ -37,38 +47,71 @@
     </header>
     <main id="main" class="main-content">
         <h2>Event calendar</h2>
-        <h6>Find a date:</h6>
+        <h4>Find a date & click:</h4>
         <section class="events-container">
-            <div class="event">
-                <article>
-                    event cards for the event posted
-                </article>   
-                <img class="card-cover" src="./assets/pexels-anime-con.jpg" alt="Ice Shaving Competition"/>
+            <div class="event-info-header">
+                <h3>Animecon</h3>
+                <h3>2/28/2025 @ 3:00 pm</h3>
+                <div class="event">
+                    <div class="event-info-container">
+                        Anime con is in town!. Come join friends and dress up and meet your favorite characters.
+                    </div>
+                    <div class="event-card-cover">
+                        <img class="card-cover" src="./assets/pexels-anime-con.jpg" alt="Ice Shaving Competition"/>
+                    </div>
+                </div>
             </div>
-            <div class="event">
-                <article>
-                    event cards for the event posted
-                </article>   
-                <img class="card-cover" src="./assets/pexels-hot-girls-cold-beer-sign.jpg" alt="Singles night"/>
-           </div>
-            <div class="event">
-                <article>
-                    event cards for the event posted
-                </article>  
-                <img class="card-cover" src="./assets/pexels-concert-night.jpg" alt="Music Fesitival"/>
+            <div class="event-info-header">
+                <h3>Singles night</h3>
+                <h3>2/22/2025 @ 7:00 pm</h3>
+                <div class="event">
+                    <div class="event-info-container">
+                        Singles night! Come grab a drink and meet that special someone.
+                    </div>
+                    <div class="event-card-cover">
+                        <img class="card-cover" src="./assets/pexels-hot-girls-cold-beer-sign.jpg" alt="Ice Shaving Competition"/>
+                    </div>
+                </div>
             </div>
-            <div class="event">
-                <article>
-                    event cards for the event posted
-                </article>   
-                <img class="card-cover" src="./assets/pexels-running-event.jpg" alt="Running Event"/>
+            <div class="event-info-header">
+                <h3>Concert at the Beach</h3>
+                <h3>2/18/2025 @ 6:00 pm</h3>
+                <div class="event">
+                    <div class="event-info-container">
+                        Open beach venue for local artist. Come support the rising stars.
+                    </div>
+                    <div class="event-card-cover">
+                        <img class="card-cover" src="./assets/pexels-concert-night.jpg" alt="Ice Shaving Competition"/>
+                    </div>
+                </div>
             </div>
-            <div class="event">
-                <article>
-                    event cards for the event posted
-                </article>   
-                <img class="card-cover" src="./assets/pexels-blanket-costumes.jpg" alt="Costume with friends"/>
+            
+            <div class="event-info-header">
+                <h3>10K Fun Run</h3>
+                <h3>2/16/2025 @ 8:00 am</h3>
+                <div class="event">
+                    <div class="event-info-container">
+                        Challenge your self with our annual marathons for charity.
+                    </div>
+                    <div class="event-card-cover">
+                        <img class="card-cover" src="./assets/pexels-running-event.jpg" alt="Ice Shaving Competition"/>
+                    </div>
+                </div>
             </div>
+            
+            <div class="event-info-header">
+                <h3>Costume Night</h3>
+                <h3>2/15/2025 @ 10:00 pm</h3>
+                <div class="event">
+                    <div class="event-info-container">
+                        Come out and show out! Costume night with friends.
+                    </div>
+                    <div class="event-card-cover">
+                        <img class="card-cover" src="./assets/pexels-blanket-costumes.jpg" alt="Ice Shaving Competition"/>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </main>
     <div id="about" class="about-content">
@@ -76,30 +119,39 @@
             <img class="portrait" src="./assets/pexels-emmy.jpg" alt="community organizer">
         </section>
         <section class="about-section">
-            <article>
+            <article class="message">
                 Thank you to a team of dedicated individuals. We have created a
                 community that fosters the idea of connections. We aim to bring
                 everyone inclusivity and union if they are looking for a place 
                 to belong. Come find an event and meet the locals. Experience our
                 vibrant life we built together. 
-            </article><quote>- Emmy Doe</quote>
+            </article><quote class="quote">- Emmy Doe</quote>
         </section>
         <img>
     </div>
     <footer id="foot" class="footer-content">
-        <section>
-            <h3>email or call us:</h3>
+        <section class="footer-section">
+            <h3 class="footer-title">email or call us:</h3>
             <p>eventicenter@gamil.com</p>
+            <p>1+ (123) 456 - 7890</p>
         </section>
-        <section>
-            <h3>Links:</h3>
+        <section class="footer-section">
+            <h3 class="footer-title">Links:</h3>
+            <ul class="bottom-links">
+                <li class="bottom-link"><a class="bottom-events" href="#main">Events</a></li>
+                <li class="bottom-link"><a class="bottom-about" href="#main">About</a></li>
+                <li class="bottom-link"><a class="bottom-contact" href="#main">Contact</a></li>
+            </ul>
         </section>
-        <section>
-            <h3>Comments, Concerns:</h3>
-            <form>
-                <input type="text"/>
-                <input type="text"/>
-                <input type="text"/>
+        <section class="footer-section">
+            <h3 class="footer-title">Comments, Concerns:</h3>
+            <form action="#" method="POST" class="contact-us-form">
+                <label class="labels">Name:</label>
+                <input class="inputs" type="text" placeholder="Your Name"/>
+                <label class="labels">Email:</label>
+                <input class="inputs" type="text" placeholder="Email@"/>
+                <label class="labels">Message:</label>
+                <input class="inputs" type="text" placeholder="What would you like to share?"/>
             </form>
         </section>
     </footer>
