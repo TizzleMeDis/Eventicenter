@@ -12,7 +12,7 @@
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 
 
-    --transition-timing: ease-in-out 400ms;
+    --transition-timing: ease-in-out 200ms;
 }
 
 * {
@@ -27,7 +27,9 @@ body {
     color: var(--text-color);
     font-family: 'Courier New', monospace;
 }
-
+a {
+    text-decoration: none;
+}
 /*----------------- Header ------------------*/
 .logo, .events, .about, .contact {
     color: white;

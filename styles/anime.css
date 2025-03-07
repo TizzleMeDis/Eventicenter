@@ -1,0 +1,188 @@
+:root {
+    --background-color: #F0F7EE;
+    --text-color: #000000;
+    --accent-color: #87bba2;
+    --dim-color: #5D737E;
+    --bold-color: #FFF07C;
+
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --hamburger-margin: 8px;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+
+
+    --transition-timing: ease-in-out 200ms;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+}
+
+.cover-image {
+    display: inline-block;
+
+    height: 100%;
+    width: 100%;
+
+    object-fit: contain;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+
+}
+
+.cover {
+    display: inline-block;
+    border-radius: 25px;
+
+    width: 40rem;
+    height: 25rem;
+    
+    margin: 3rem;
+    text-align: center;
+
+}
+
+.header-text {
+    text-align: center;
+    margin: 2rem;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 2rem
+}
+
+.tables {
+    border: 2px solid black;
+    box-shadow: #000000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+table {
+    margin: 1rem;
+    padding: 1rem;
+
+    border-collapse: separate;
+    border-spacing: 10px; /* Adds gap between columns */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--accent-color); /* Light gray background for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+/*---------------- footer ---------------*/
+.footer-content {
+    background-color: var(--dim-color);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 2rem;
+}
+
+.footer-title {
+    text-decoration: underline;
+    font-size:larger;
+    margin: 1rem;
+    text-align: center;
+}
+
+.bottom-links {
+    list-style-type: none;
+}
+.bottom-link {
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.bottom-events, .bottom-about, .bottom-contact {
+    color: var(--background-color);
+    text-decoration-line: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+}
+.labels {
+    margin-top: .5rem;
+}
+.inputs {
+    padding: .5rem;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+        margin: 2rem
+    }    
+}
+
+
+
+
+@media screen and (max-width:709.9px) { /*----------- For Mobile screens------*/
+    
+    /*------- header section ------------*/
+    .welcome-text, .welcome-subtext {
+        font-size: 1.5rem;
+    }
+    /*------- main content section ------------*/
+    .main-content {
+        padding: 2rem 0;
+    }
+    .events-container {
+        width: 100%;
+        border-radius: 0;
+        background-color: rgba(135, 187, 162, 0.8);
+    }
+    /*------- about section ------------*/
+    .about-content {
+        flex-direction: column;
+    }
+    /*------- footer section ------------*/
+    .footer-content {
+        background-color: var(--dim-color);
+        color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
+
+@media screen and (min-width:710px) { /*----------- For Pc Screens -------------*/
+    .sidebar, .link:last-child {
+        display: none;
+    }
+    .events-container {
+        width: 95%;
+    }
+}
