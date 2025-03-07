@@ -17,7 +17,7 @@
 a {
     text-decoration: none;
 }
-
+/*----------------- Header ------------------*/
 .logo, .events, .about, .contact {
     color: white;
     background-color: var(--accent-color);
@@ -89,7 +89,9 @@ nav {
     }
 
     .sidebar {
+        opacity: 0;
         visibility: hidden;
+        transition: all var(--transition-timing);
     }
     
     .hamburger-menu::before, .hamburger-menu::after, .hamburger-menu input {
@@ -109,9 +111,11 @@ nav {
         pointer-events: none;
     }
     /*--------------------Hamburger menu toggle animation---------------------------*/
-    nav:has(.hamburger-menu input:checked) .sidebar {
+    body:has(.hamburger-menu input:checked) .sidebar {
+        opacity: 1;
         visibility: visible;
     }
+
     .hamburger-menu:has(input:checked)::before,
     .hamburger-menu:has(input:checked)::after {
         background-color: var(--background-color);
@@ -131,3 +135,4 @@ nav {
         translate: 0 calc(var(--bar-height) / 2);
     }
     /*------------------------------------*/
+}
