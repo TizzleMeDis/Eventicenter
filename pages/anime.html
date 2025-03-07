@@ -6,8 +6,8 @@
     <title>Eventicenter - Animecon</title>
 
     <link rel="stylesheet" href="../styles/navbar.css">
-    <link rel="stylesheet" href="../styles/anime.css">
     <link rel="stylesheet" href="../styles/event.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 </head>
 <body>
     <!--    Header Section   -->
@@ -31,7 +31,7 @@
         <a class="hamburger-link about" href="../index.html">About</a>
         <a class="hamburger-link contact" href="../index.html">Contact</a>
     </aside>
-    
+    <div class="main-content">
     <section class="header-text">
         <h2>Anime Con</h2>
         <h3>Date: 2/28/2025 @ Time: 3:00 pm - 9:00 pm</h3>
@@ -44,7 +44,7 @@
         <div class="tables">
             <table>
                 <thead>
-                    <tr>
+                    <tr class="table-header">
                         <th>General Admission</th>
                         <th>Price</th>
                         <th>Time Slot</th>
@@ -65,7 +65,7 @@
             </table>
             <table>
                 <thead>
-                    <tr>
+                    <tr class="table-header">
                         <th>Tabling the Event</th>
                         <th>Price</th>
                         <th>Time Slot</th>
@@ -97,11 +97,14 @@
         </div>
     </main>
     <!--    Footer Section   -->
+    </div>
     <footer id="foot" class="footer-content">
         <section class="footer-section">
             <h3 class="footer-title">email or call us:</h3>
-            <p>eventicenter@gamil.com</p>
-            <p>1+ (123) 456 - 7890</p>
+            <p class="bottom-contacts">eventicenter@gamil.com</p>
+            <p class="bottom-contacts">1+ (123) 456 - 7890</p>
+            <p class="bottom-contacts">For our location:</p>
+            <p class="bottom-contacts"><a class="btn-location" href="./location.html">Click Me!</a></p>
         </section>
         <section class="footer-section">
             <h3 class="footer-title">Links:</h3>
@@ -114,13 +117,13 @@
         <section class="footer-section">
             <h3 class="footer-title">Comments, Concerns:</h3>
             <form action="#" method="POST" class="contact-us-form">
-                <label class="labels">Name:</label>
-                <input class="inputs" type="text" placeholder="Your Name"/>
-                <label class="labels">Email:</label>
-                <input class="inputs" type="text" placeholder="Email@"/>
-                <label class="labels">Message:</label>
-                <input class="inputs" type="text" placeholder="What would you like to share?"/>
-                <input type="button" value="Submit"/>
+                <label class="labels" for="full-name">Name:</label>
+                <input class="inputs" type="text" placeholder="Your Name" name="full-name" required/>
+                <label class="labels" for="user-email">Email:</label>
+                <input class="inputs" type="email" placeholder="Enter Email@" name="user-email" required/>
+                <label class="labels" for="message">Message:</label>
+                <textarea class="inputs" name="message" placeholder="What would you like to share?" rows="3" required></textarea>
+                <input type="submit" value="Submit"/>
             </form>
         </section>
     </footer>

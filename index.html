@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
     <!--    Header Section   -->
@@ -70,7 +71,7 @@
             <div class="event-info-header">
                 <h3>Singles night</h3>
                 <h3>2/22/2025 @ 7:00 pm</h3>
-                <a href="./pages/barNight.html">
+                <a href="./pages/bar-night.html">
                     <div class="event">
                         <div class="event-info-container">
                             Singles night! Come grab a drink and meet that special someone.
@@ -114,7 +115,7 @@
             <div class="event-info-header">
                 <h3>Costume Night</h3>
                 <h3>2/15/2025 @ 10:00 pm</h3>
-                <a href="./pages/costume.html">
+                <a href="./pages/costume-night.html">
                     <div class="event">
                         <div class="event-info-container">
                             Come out and show out! Costume night with friends.
@@ -148,8 +149,10 @@
     <footer id="foot" class="footer-content">
         <section class="footer-section">
             <h3 class="footer-title">email or call us:</h3>
-            <p>eventicenter@gamil.com</p>
-            <p>1+ (123) 456 - 7890</p>
+            <p class="bottom-contacts">eventicenter@gamil.com</p>
+            <p class="bottom-contacts">1+ (123) 456 - 7890</p>
+            <p class="bottom-contacts">For our location:</p>
+            <p class="bottom-contacts"><a class="btn-location" href="./location.html">Click Me!</a></p>
         </section>
         <section class="footer-section">
             <h3 class="footer-title">Links:</h3>
@@ -162,12 +165,13 @@
         <section class="footer-section">
             <h3 class="footer-title">Comments, Concerns:</h3>
             <form action="#" method="POST" class="contact-us-form">
-                <label class="labels">Name:</label>
-                <input class="inputs" type="text" placeholder="Your Name"/>
-                <label class="labels">Email:</label>
-                <input class="inputs" type="text" placeholder="Email@"/>
-                <label class="labels">Message:</label>
-                <input class="inputs" type="text" placeholder="What would you like to share?"/>
+                <label class="labels" for="full-name">Name:</label>
+                <input class="inputs" type="text" placeholder="Your Name" name="full-name" required/>
+                <label class="labels" for="user-email">Email:</label>
+                <input class="inputs" type="email" placeholder="Enter Email@" name="user-email" required/>
+                <label class="labels" for="message">Message:</label>
+                <textarea class="inputs" name="message" placeholder="What would you like to share?" rows="3" required></textarea>
+                <input type="submit" value="Submit"/>
             </form>
         </section>
     </footer>

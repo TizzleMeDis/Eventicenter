@@ -22,7 +22,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: var(--accent-color);
     color: var(--text-color);
     font-family: 'Courier New', monospace;
 }
@@ -53,7 +53,11 @@ body {
 
 .header-text {
     text-align: center;
-    margin: 2rem;
+    padding: 2rem;
+}
+
+.main-content {
+    background-color: var(--background-color);
 }
 
 .main-section {
@@ -62,7 +66,11 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    margin: 2rem
+    padding: 2rem;
+}
+
+.table-header {
+    text-decoration: underline;
 }
 
 .tables {
@@ -87,53 +95,6 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
     background-color: var(--background-color);
 }
-/*---------------- footer ---------------*/
-.footer-content {
-    background-color: var(--dim-color);
-    color: var(--background-color);
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-.footer-section {
-    flex: 1;
-    padding: 2rem;
-}
-
-.footer-title {
-    text-decoration: underline;
-    font-size:larger;
-    margin: 1rem;
-    text-align: center;
-}
-
-.bottom-links {
-    list-style-type: none;
-}
-.bottom-link {
-    padding: 1rem 0;
-    margin: 1rem 0;
-}
-
-.bottom-events, .bottom-about, .bottom-contact {
-    color: var(--background-color);
-    text-decoration-line: underline;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    margin: .5rem;
-}
-.labels {
-    margin-top: .5rem;
-}
-.inputs {
-    padding: .5rem;
-}
-
-
 
 @media screen and (max-width:1024px) {
     .main-section {
@@ -142,39 +103,21 @@ form {
         justify-content: space-around;
         align-items: center;
     
-        margin: 2rem
+        padding: 2rem;
     }    
 }
 
-
-
-
 @media screen and (max-width:709.9px) { /*----------- For Mobile screens------*/
+    .cover {
+        display: inline-block;
+        border-radius: 25px;
     
-    /*------- header section ------------*/
-    .welcome-text, .welcome-subtext {
-        font-size: 1.5rem;
-    }
-    /*------- main content section ------------*/
-    .main-content {
-        padding: 2rem 0;
-    }
-    .events-container {
-        width: 100%;
-        border-radius: 0;
-        background-color: rgba(135, 187, 162, 0.8);
-    }
-    /*------- about section ------------*/
-    .about-content {
-        flex-direction: column;
-    }
-    /*------- footer section ------------*/
-    .footer-content {
-        background-color: var(--dim-color);
-        color: var(--background-color);
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
+        width: 35rem;
+        height: 20rem;
+        
+        margin: 2rem;
+        text-align: center;
+    
     }
 }
 

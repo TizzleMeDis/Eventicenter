@@ -27,47 +27,6 @@ body {
     color: var(--text-color);
     font-family: 'Courier New', monospace;
 }
-a {
-    text-decoration: none;
-}
-/*----------------- Header ------------------*/
-.logo, .events, .about, .contact {
-    color: white;
-    background-color: var(--accent-color);
-    text-decoration: none;
-    padding: .5rem;
-    border-radius: 9999px;
-    transition: all var(--transition-timing)
-}
-
-.logo:hover, .events:hover, .about:hover, .contact:hover {
-    scale: 1.2;
-}
-
-nav {
-    position: sticky;
-    top: 0px;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
-}
-
-.links {
-    list-style-type: none;
-    
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    color: white;
-}
-
-.link {
-    padding: 1rem;
-}
-
-.link:first-child {
-    flex: 1;
-}
 
 .welcome-banner {
     margin: 0;
@@ -247,128 +206,8 @@ img:nth-of-type(5){
     font-weight: bold;
     font-size: x-large;
 }
-/*---------------- footer ---------------*/
-.footer-content {
-    background-color: var(--dim-color);
-    color: var(--background-color);
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-.footer-section {
-    flex: 1;
-    padding: 2rem;
-}
-
-.footer-title {
-    text-decoration: underline;
-    font-size:larger;
-    margin: 1rem;
-    text-align: center;
-}
-
-.bottom-links {
-    list-style-type: none;
-}
-.bottom-link {
-    padding: 1rem 0;
-    margin: 1rem 0;
-}
-
-.bottom-events, .bottom-about, .bottom-contact {
-    color: var(--background-color);
-    text-decoration-line: underline;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    margin: .5rem;
-}
-.labels {
-    margin-top: .5rem;
-}
-.inputs {
-    padding: .5rem;
-}
-
 @media screen and (max-width:709.9px) { /*----------- For Mobile screens------*/
-    /*------- navigation section ------------*/
-    .link:nth-child(2), .link:nth-child(3), .link:nth-child(4) {
-        display: none;
-    }
-    .hamburger-menu {
-        --x-width: calc(var(--hamburger-height) * 1.41421356237); /* calculate the lenth of the bars for an x */
-      
-        display: flex;
-        flex-direction: column;
-        gap: var(--hamburger-gap);
-        width: max-content;
-        z-index: 2;
-        cursor: pointer;
-    }
-    .sidebar {
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-
-        position: fixed;
-        right: 1rem;
-        max-width: fit-content;
-
-        padding: 0 2rem;
-        z-index: 100;
-    }
-
-    .hamburger-link {
-        margin: 1rem 0;
-    }
-
-    .sidebar {
-        visibility: hidden;
-    }
-    
-    .hamburger-menu::before, .hamburger-menu::after, .hamburger-menu input {
-    content: "";
-    width: var(--bar-width);
-    height: var(--bar-height);
-    background-color: var(--accent-color);
-    border-radius: 9999px;
-    transform-origin: left center;
-    transition: all var(--transition-timing);
-    }
-    .hamburger-menu input {
-        appearance: none;
-        padding: 0;
-        margin: 0;
-        outline: none;
-        pointer-events: none;
-    }
-    /*--------------------Hamburger menu toggle animation---------------------------*/
-    nav:has(.hamburger-menu input:checked) .sidebar {
-        visibility: visible;
-    }
-    .hamburger-menu:has(input:checked)::before,
-    .hamburger-menu:has(input:checked)::after {
-        background-color: var(--background-color);
-    }
-    .hamburger-menu input:checked {
-        opacity: 0;
-    
-    }
-    .hamburger-menu:has(input:checked)::before {
-        rotate: 45deg;
-        width: var(--x-width);
-        translate: 0 calc(var(--bar-height) / -2);
-    }
-    .hamburger-menu:has(input:checked)::after {
-        rotate: -45deg;
-        width: var(--x-width);
-        translate: 0 calc(var(--bar-height) / 2);
-    }
-    /*------------------------------------*/
+   
     /*------- header section ------------*/
     .welcome-text, .welcome-subtext {
         font-size: 1.5rem;
@@ -386,23 +225,7 @@ form {
     .about-content {
         flex-direction: column;
     }
-    /*------- footer section ------------*/
-    .footer-content {
-        background-color: var(--dim-color);
-        color: var(--background-color);
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-    }
-}
 
-@media screen and (min-width:710px) { /*----------- For Pc Screens -------------*/
-    .sidebar, .link:last-child {
-        display: none;
-    }
-    .events-container {
-        width: 95%;
-    }
 }
 
 @keyframes fade {
