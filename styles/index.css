@@ -107,7 +107,6 @@ img:nth-of-type(5){
 }
 .events-container {
     background-color: var(--accent-color);
-    margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
     height: 60vh;
@@ -129,10 +128,10 @@ img:nth-of-type(5){
 
 .event {
     background-color: rgba(0, 0, 0, 0.6);
-    min-width: 320px; /* Prevents shrickage */
-    max-width: 320px; /* Prevents expansion */
-    height: 500px;
-    margin: 16px;
+    min-width: 20rem; /* Prevents shrickage */
+    max-width: 20rem; /* Prevents expansion */
+    height: 31.25rem;
+    margin: 1rem;
     border-radius: 5px;
 
     display: flex;
@@ -150,6 +149,11 @@ img:nth-of-type(5){
 
 .event-info-container {
     color: var(--background-color)
+}
+
+.event-info-header {
+    margin-top:auto;
+    margin-bottom: auto;
 }
 
 .event-card-container {

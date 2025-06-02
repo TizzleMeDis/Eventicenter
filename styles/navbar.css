@@ -147,7 +147,4 @@ nav {
     .sidebar, .link:last-child {
         display: none;
     }
-    .events-container {
-        width: 95%;
-    }
 }
